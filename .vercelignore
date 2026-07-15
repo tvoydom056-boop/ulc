@@ -1,0 +1,16 @@
+.claude
+references
+*.pdf
+
+# неиспользуемые экспорты/черновики (не referенсятся из index.html)
+img/turntable.apng
+img/turntable.gif
+img/turntable.mp4
+img/turntable.webp
+images/Group 5.png
+images/Group 6 (1).png
+images/Group 7 (1).png
+images/В1.png
+images/В2.png
+images/меню.png
+images/страница кейса.png

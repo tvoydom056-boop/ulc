@@ -3,19 +3,19 @@
     const menuToggle = document.querySelector(".menu-toggle");
     const menuClose = document.querySelector(".menu-close");
     const homeView = document.getElementById("main");
-    const caseView = document.getElementById("caseView");
+    const caseViews = Array.from(document.querySelectorAll(".case-view[data-case-route]"));
     const footer = document.getElementById("footer");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const parallaxItems = Array.from(document.querySelectorAll("[data-parallax]"));
     const turntableImages = Array.from(document.querySelectorAll(".hero .turntable-img"));
     const turntableFrames = [
-      "img/front.png",
-      "img/right1.png",
-      "img/right2.png",
-      "img/left2.png",
-      "img/left1.png",
-      "img/front.png",
-      "img/front.png"
+      "img/front.webp",
+      "img/right1.webp",
+      "img/right2.webp",
+      "img/left2.webp",
+      "img/left1.webp",
+      "img/front.webp",
+      "img/front.webp"
     ];
     const pointer = { x: 0, y: 0 };
     let ticking = false;
@@ -26,6 +26,11 @@
       menu.classList.add("is-open");
       menu.setAttribute("aria-hidden", "false");
       menuToggle.setAttribute("aria-expanded", "true");
+      homeView.inert = true;
+      caseViews.forEach((view) => {
+        view.inert = true;
+      });
+      footer.inert = true;
       body.classList.add("menu-open");
       menuClose.focus();
     }
@@ -34,6 +39,11 @@
       menu.classList.remove("is-open");
       menu.setAttribute("aria-hidden", "true");
       menuToggle.setAttribute("aria-expanded", "false");
+      homeView.inert = false;
+      caseViews.forEach((view) => {
+        view.inert = view.hidden;
+      });
+      footer.inert = false;
       body.classList.remove("menu-open");
       menuToggle.focus();
     }
@@ -112,10 +122,18 @@
         return;
       }
 
-      turntableFrames.forEach((src) => {
-        const image = new Image();
-        image.src = src;
-      });
+      const preloadFrames = () => {
+        turntableFrames.forEach((src) => {
+          const image = new Image();
+          image.src = src;
+        });
+      };
+
+      if (document.readyState === "complete") {
+        preloadFrames();
+      } else {
+        window.addEventListener("load", preloadFrames, { once: true });
+      }
 
       turntableTimer = window.setInterval(() => {
         frameIndex = (frameIndex + 1) % turntableFrames.length;
@@ -127,10 +145,15 @@
     }
 
     function renderRoute() {
-      const isCase = window.location.hash === "#case-norma";
+      const activeCase = caseViews.find((view) => view.dataset.caseRoute === window.location.hash);
+      const isCase = Boolean(activeCase);
       homeView.hidden = isCase;
       footer.hidden = isCase;
-      caseView.hidden = !isCase;
+      caseViews.forEach((view) => {
+        const isActive = view === activeCase;
+        view.hidden = !isActive;
+        view.inert = !isActive;
+      });
       body.classList.toggle("case-mode", isCase);
 
       if (isCase) {
@@ -163,7 +186,7 @@
       if (reducedMotion.matches && turntableTimer) {
         window.clearInterval(turntableTimer);
         turntableImages.forEach((image) => {
-          image.src = "img/front.png";
+          image.src = "img/front.webp";
         });
       }
     });

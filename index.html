@@ -10,6 +10,9 @@
   <meta property="og:description" content="Упаковка бренда за 9 дней: айдентика, гайды, брендбук, сайты, креативы.">
   <meta property="og:image" content="img/front.png">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,7 +31,7 @@
         </h1>
         <p class="hero__intro">я Регина, ищу проектную / полную занятость</p>
         <div class="hero__visual" aria-hidden="true" data-parallax data-depth="-0.13" data-rotate="-0.05">
-          <img class="portrait turntable-img" src="img/front.png" alt="">
+          <img class="portrait turntable-img" src="img/front.webp" width="981" height="981" alt="" loading="eager" fetchpriority="high" decoding="async">
         </div>
         <dl class="stats" aria-label="ключевые факты" data-parallax data-depth="0.12" data-rotate="0.04">
           <div class="stat">
@@ -52,16 +55,16 @@
         <h2 class="package__title" id="packageTitle">{//. упакую бренд<br>за 9 дней:</h2>
         <div class="package__body">
           <div class="package__media" aria-hidden="true">
-            <img class="package__image package__image--top" src="images/А.png" alt="">
+            <img class="package__image package__image--top" src="images/А.png" width="191" height="191" alt="">
             <span class="package__arrow"></span>
-            <img class="package__image package__image--bottom" src="images/Б.png" alt="">
+            <img class="package__image package__image--bottom" src="images/Б.png" width="191" height="219" alt="">
           </div>
           <ol class="steps" data-parallax data-depth="-0.08">
             <li>концепция</li>
             <li>макет</li>
             <li>дизайн</li>
           </ol>
-          <p class="package__note">этот сайт я сделала за 7 дней</p>
+          <p class="package__note">этот сайт я сделала <br class="package__note-break">за 7 дней</p>
         </div>
       </div>
     </section>
@@ -71,8 +74,8 @@
         <h2 class="section-title" id="skillsTitle">что умею</h2>
         <div class="skills__stage">
           <div class="skills__portrait" aria-hidden="true">
-            <img class="skills__portrait-part skills__portrait-part--top" src="images/верх головы.png" alt="">
-            <img class="skills__portrait-part skills__portrait-part--bottom" src="images/низ головы.png" alt="">
+            <img class="skills__portrait-part skills__portrait-part--top" src="images/верх головы.webp" width="862" height="481" alt="" loading="lazy" decoding="async">
+            <img class="skills__portrait-part skills__portrait-part--bottom" src="images/низ головы.webp" width="815" height="518" alt="" loading="lazy" decoding="async">
           </div>
           <span class="skill-label" data-parallax data-depth="0.18" data-rotate="0.08">гайды</span>
           <span class="skill-label" data-parallax data-depth="-0.1" data-rotate="-0.04">айдентика</span>
@@ -95,25 +98,24 @@
         </div>
         <div class="desktop-board" aria-label="список кейсов">
           <div class="desktop-board__portrait" aria-hidden="true">
-            <img class="portrait" src="img/front.png" alt="">
+            <img class="portrait" src="images/panama.webp" width="600" height="800" alt="" loading="lazy" decoding="async">
           </div>
 
-          <a class="case-folder case-folder--norma" href="#case-norma" aria-label="открыть кейс этот сайт" data-parallax data-depth="-0.1" data-rotate="-0.05">
+          <button class="case-folder case-folder--norma case-folder--soon" type="button" disabled data-parallax data-depth="-0.1" data-rotate="-0.05">
             <span class="folder-icon" aria-hidden="true"></span>
             <span class="folder-name">Этот сайт</span>
+            <span class="folder-soon">скоро</span>
+          </button>
+
+          <a class="case-folder case-folder--site" href="#case-tish" aria-label="открыть кейс лендинга Тишь" data-parallax data-depth="0.12" data-rotate="0.04">
+            <span class="folder-icon" aria-hidden="true"></span>
+            <span class="folder-name">Лендинг</span>
           </a>
 
-          <button class="case-folder case-folder--site case-folder--soon" type="button" disabled data-parallax data-depth="0.12" data-rotate="0.04">
-            <span class="folder-icon" aria-hidden="true"></span>
-            <span class="folder-name">Сайт на Tilda</span>
-            <span class="folder-soon">скоро</span>
-          </button>
-
-          <button class="case-folder case-folder--brand case-folder--soon" type="button" disabled data-parallax data-depth="-0.16" data-rotate="-0.04">
+          <a class="case-folder case-folder--brand" href="#case-pole" aria-label="открыть кейс брендинга Поле" data-parallax data-depth="-0.16" data-rotate="-0.04">
             <span class="folder-icon" aria-hidden="true"></span>
             <span class="folder-name">Брендинг</span>
-            <span class="folder-soon">скоро</span>
-          </button>
+          </a>
 
           <button class="case-folder case-folder--motion case-folder--soon" type="button" disabled data-parallax data-depth="0.16" data-rotate="0.05">
             <span class="folder-icon" aria-hidden="true"></span>
@@ -121,11 +123,10 @@
             <span class="folder-soon">скоро</span>
           </button>
 
-          <button class="case-folder case-folder--app case-folder--soon" type="button" disabled data-parallax data-depth="-0.12" data-rotate="-0.06">
+          <a class="case-folder case-folder--app" href="#case-norma" aria-label="открыть кейс приложения Норма" data-parallax data-depth="-0.12" data-rotate="-0.06">
             <span class="folder-icon" aria-hidden="true"></span>
             <span class="folder-name">Приложение</span>
-            <span class="folder-soon">скоро</span>
-          </button>
+          </a>
 
           <span class="cursor-mark" aria-hidden="true"></span>
         </div>
@@ -134,13 +135,13 @@
 
     <section class="cta section" id="contacts" aria-labelledby="ctaTitle">
       <div class="cta__inner">
-        <h2 class="cta__title" id="ctaTitle">пишите, обсудим ваш проект без г<span class="face-o" aria-hidden="true"></span>л<span class="face-o" aria-hidden="true"></span>вн<span class="face-o" aria-hidden="true"></span>й боли</h2>
+        <h2 class="cta__title" id="ctaTitle">пишите, обсудим ваш проект без <span class="cta__word">г<span class="face-o" aria-hidden="true"></span>л<span class="face-o" aria-hidden="true"></span>вн<span class="face-o" aria-hidden="true"></span>й</span> боли</h2>
         <a class="cta__button" href="https://t.me/verykarachay" target="_blank" rel="noopener" data-parallax data-depth="-0.04">тык</a>
       </div>
     </section>
   </main>
 
-  <article class="case-view" id="caseView" hidden>
+  <article class="case-view" id="caseView" data-case-route="#case-norma" hidden>
     <div class="case-page">
       <a class="back-link" href="#cases" aria-label="назад к кейсам">&lt;</a>
       <header class="case-hero">
@@ -153,46 +154,353 @@
       </header>
 
       <div class="case-body">
-        <div class="phone-strip" aria-label="мокапы экранов приложения">
-          <div class="phone">
-            <div class="phone__brand">норма</div>
-            <div class="phone__content">
-              <span class="phone__small">накопительный счет</span>
-              <strong class="phone__sum">412 300 ₽</strong>
-              <div class="phone__pill">доход за месяц<br>+8 600 ₽</div>
-            </div>
-            <div class="phone__button">пополнить счет</div>
-          </div>
-          <div class="phone phone--light">
-            <div class="phone__brand">открытие вклада</div>
-            <div class="phone__content">
-              <span class="phone__small">максимальный доход</span>
-              <strong class="phone__sum">85 600 ₽</strong>
-              <div class="phone__pill">15,5% годовых в рублях</div>
-            </div>
-            <div class="phone__button">открыть вклад</div>
-          </div>
-          <div class="phone">
-            <div class="phone__brand">норма</div>
-            <div class="phone__content">
-              <span class="phone__check">✓</span>
-              <span class="phone__small">платеж выполнен</span>
-              <strong class="phone__sum">12 450 ₽</strong>
-            </div>
-            <div class="phone__button">сохранить чек</div>
-          </div>
-        </div>
+        <figure class="case-figure case-figure--lead">
+          <img src="images/norma/ris-01.webp" width="1061" height="597" alt="Три экрана мобильного приложения Норма" loading="eager" fetchpriority="high" decoding="async">
+          <figcaption>Мобильное приложение «Норма»</figcaption>
+        </figure>
 
-        <div class="case-facts">
-          <p class="case-fact"><strong class="tech">проблема:</strong> обновление дизайн системы</p>
-          <p class="case-fact"><strong class="tech">решение:</strong> обновление дизайн системы</p>
-          <p class="case-fact"><strong class="tech">срок:</strong> 3 недели</p>
-        </div>
+        <dl class="case-facts">
+          <div>
+            <dt>задача:</dt>
+            <dd>обновили дизайн-систему, дополнили экранами</dd>
+          </div>
+          <div>
+            <dt>результат:</dt>
+            <dd>добавили 20+ фреймов, дополнили UI kit, создали логобук и гайдлайн</dd>
+          </div>
+          <div>
+            <dt>срок:</dt>
+            <dd>3 недели</dd>
+          </div>
+        </dl>
       </div>
 
-      <section class="case-description" aria-labelledby="caseDescriptionTitle">
-        <h2 id="caseDescriptionTitle">Описание</h2>
-        <p>Обновление UI для финтех-продукта: привести экраны к единой визуальной системе, сохранить понятную навигацию и сделать интерфейс спокойнее для регулярного использования.</p>
+      <section class="case-section" aria-labelledby="conceptTitle">
+        <h2 class="case-section__title" id="conceptTitle">концепт</h2>
+        <p class="case-section__copy">В основе концепции — контраст строгой финансовой логики и яркого лаймового акцента. Тёмные поверхности, крупная типографика и мягкие градиенты помогают быстро считывать главное и делают ежедневные сценарии понятными.</p>
+        <div class="case-gallery case-gallery--concept">
+          <figure class="case-figure">
+            <img src="images/norma/ris-02.webp" width="381" height="678" alt="Светлый экран приложения Норма на тёмном фоне" loading="lazy" decoding="async">
+            <figcaption>Концепт главного экрана</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="images/norma/ris-03.webp" width="381" height="678" alt="Экран премиального продукта Норма Black" loading="lazy" decoding="async">
+            <figcaption>Премиальный продукт «Норма Black»</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section case-section--palette" aria-labelledby="paletteTitle">
+        <h2 class="case-section__title" id="paletteTitle">палитра</h2>
+        <div class="case-palette" aria-label="цветовая палитра приложения Норма">
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #d4fc46"></span><strong>#D4FC46</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #4f4f51"></span><strong>#4F4F51</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #636a83"></span><strong>#636A83</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #e7e6df"></span><strong>#E7E6DF</strong></div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="logobookTitle">
+        <h2 class="case-section__title" id="logobookTitle">логобук</h2>
+        <p class="case-section__copy">Логотип собран из простых модулей и поддерживает характер продукта — технологичный, точный и дружелюбный. Знак и написание сохраняют читаемость как в интерфейсе, так и в рекламных материалах.</p>
+        <div class="case-gallery case-gallery--logobook">
+          <figure class="case-figure">
+            <img src="images/norma/ris-04.webp" width="968" height="684" alt="Конструкция логотипа Норма и фирменный знак" loading="lazy" decoding="async">
+            <figcaption>Построение логотипа</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="images/norma/ris-05.webp" width="969" height="684" alt="Варианты фирменного знака Норма" loading="lazy" decoding="async">
+            <figcaption>Фирменный знак</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="images/norma/ris-06.webp" width="968" height="684" alt="Правила использования логотипа Норма" loading="lazy" decoding="async">
+            <figcaption>Охранное поле</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="screensTitle">
+        <h2 class="case-section__title" id="screensTitle">экраны</h2>
+        <p class="case-section__copy">Интерфейс объединён единой дизайн-системой: ключевые действия выделены лаймовым цветом, а суммы и статусы быстро считываются. Экраны показывают основные сценарии — от входа и главной до накоплений, вкладов, переводов и подтверждения операций.</p>
+        <div class="case-gallery case-gallery--screens">
+          <figure class="case-figure"><img src="images/norma/ris-07.webp" width="417" height="903" alt="Стартовый экран открытия счёта в приложении Норма" loading="lazy" decoding="async"><figcaption>Онбординг: открытие счёта</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-08.webp" width="417" height="903" alt="Стартовый экран Норма с размытыми цветовыми элементами" loading="lazy" decoding="async"><figcaption>Онбординг: визуальная концепция</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-09.webp" width="417" height="903" alt="Экран перевода рублей в евро" loading="lazy" decoding="async"><figcaption>Перевод между валютами</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-10.webp" width="422" height="893" alt="Экран предложения Норма Black" loading="lazy" decoding="async"><figcaption>Премиальное предложение «Норма Black»</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-11.webp" width="417" height="902" alt="Экран со списком банковских продуктов" loading="lazy" decoding="async"><figcaption>Каталог продуктов</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-12.webp" width="422" height="902" alt="Экран расчёта и оплаты налога на профессиональный доход" loading="lazy" decoding="async"><figcaption>Оплата НПД</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-13.webp" width="417" height="902" alt="Экран выставления счёта клиенту" loading="lazy" decoding="async"><figcaption>Выставление счёта клиенту</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-14.webp" width="422" height="902" alt="Экран чека ФНС с QR-кодом" loading="lazy" decoding="async"><figcaption>Чек ФНС для клиента</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-15.webp" width="417" height="914" alt="Экран дохода за май" loading="lazy" decoding="async"><figcaption>Доход за месяц</figcaption></figure>
+          <figure class="case-figure"><img src="images/norma/ris-16.webp" width="422" height="902" alt="Главный экран с балансом и последними операциями" loading="lazy" decoding="async"><figcaption>Баланс и последние операции</figcaption></figure>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <article class="case-view case-view--tish" id="caseTish" data-case-route="#case-tish" hidden>
+    <div class="case-page">
+      <a class="back-link" href="#cases" aria-label="назад к кейсам">&lt;</a>
+      <header class="case-hero">
+        <h1 class="case-title">тишь</h1>
+        <div class="case-tags" aria-label="теги кейса">
+          <span>лендинг</span>
+          <span>отдых</span>
+          <span>бронирование</span>
+        </div>
+      </header>
+
+      <div class="case-body">
+        <figure class="case-figure case-figure--lead tish-lead" data-parallax data-depth="0.025" data-rotate="0.01">
+          <div class="tish-showcase tish-showcase--lead">
+            <div class="tish-browser">
+              <div class="tish-browser__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="tish-site-hero">
+                <img src="images/tish/hero-cabin.webp" width="1536" height="1024" alt="Современный деревянный дом на берегу озера в Карелии" loading="eager" fetchpriority="high" decoding="async">
+                <div class="tish-site-hero__shade" aria-hidden="true"></div>
+                <div class="tish-site-nav"><strong>ТИШЬ</strong><span>Дома&nbsp;&nbsp; Отдых&nbsp;&nbsp; Как добраться</span><b>Выбрать даты</b></div>
+                <div class="tish-site-hero__copy"><span>Карелия · берег озера</span><h2>Место, где<br>слышно тишину</h2><p>Четыре дома среди сосен.<br>Вода, тепло и время для себя.</p></div>
+              </div>
+            </div>
+            <div class="tish-phone tish-phone--lead" aria-label="Мобильная версия главного экрана">
+              <div class="tish-phone__screen tish-phone__screen--hero">
+                <img src="images/tish/hero-cabin.webp" width="1536" height="1024" alt="Дом на берегу озера в мобильной версии лендинга" loading="lazy" decoding="async">
+                <div class="tish-phone__top"><strong>ТИШЬ</strong><span>Меню</span></div>
+                <div class="tish-phone__hero-copy"><small>Карелия · берег озера</small><b>Место, где<br>слышно тишину</b><span>Выбрать даты →</span></div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Лендинг загородных домов «Тишь»</figcaption>
+        </figure>
+
+        <dl class="case-facts">
+          <div>
+            <dt>задача:</dt>
+            <dd>создать спокойный лендинг для выбора дома и быстрого бронирования отдыха</dd>
+          </div>
+          <div>
+            <dt>результат:</dt>
+            <dd>адаптивный интерфейс, фирменный стиль и понятный сценарий бронирования</dd>
+          </div>
+          <div>
+            <dt>срок:</dt>
+            <dd>2 недели</dd>
+          </div>
+        </dl>
+      </div>
+
+      <section class="case-section" aria-labelledby="tishConceptTitle">
+        <h2 class="case-section__title" id="tishConceptTitle">концепт</h2>
+        <p class="case-section__copy">В основе концепции — ощущение длинной паузы вдали от города. Воздух в композиции, спокойная природная палитра и крупные фотографии передают тишину северного озера, а короткие фразы и заметные действия помогают быстро выбрать дом и перейти к бронированию.</p>
+        <div class="case-gallery case-gallery--concept tish-concept-grid">
+          <figure class="case-figure tish-photo" data-parallax data-depth="-0.035" data-rotate="-0.01">
+            <img src="images/tish/interior.webp" width="1536" height="1024" alt="Светлая гостиная деревянного дома с панорамным видом на озеро" loading="lazy" decoding="async">
+            <figcaption>Тёплое пространство внутри</figcaption>
+          </figure>
+          <figure class="case-figure tish-photo tish-photo--portrait" data-parallax data-depth="0.04" data-rotate="0.012">
+            <img src="images/tish/forest.webp" width="1024" height="1536" alt="Лесная тропа среди сосен, берёз и покрытых мхом камней" loading="lazy" decoding="async">
+            <figcaption>Северная природа как главный образ</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section case-section--palette" aria-labelledby="tishPaletteTitle">
+        <h2 class="case-section__title" id="tishPaletteTitle">палитра</h2>
+        <div class="case-palette" aria-label="цветовая палитра лендинга Тишь">
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #f2f0e8"></span><strong>#F2F0E8 · молочный</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #b9c2a3"></span><strong>#B9C2A3 · шалфейный</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #26302a"></span><strong>#26302A · хвойный</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #b56f45"></span><strong>#B56F45 · терракотовый</strong></div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="tishLogobookTitle">
+        <h2 class="case-section__title" id="tishLogobookTitle">логобук</h2>
+        <p class="case-section__copy">Словесный знак построен на широких буквах и увеличенных паузах — так даже название визуально звучит тише. Круглый знак отсылает к отражению луны в воде и работает как самостоятельная метка на носителях.</p>
+        <div class="case-gallery case-gallery--logobook tish-brand-gallery">
+          <figure class="case-figure">
+            <div class="tish-brand-board tish-brand-board--construction"><span>01 · построение</span><strong>Т И Ш Ь</strong><div class="tish-brand-lines" aria-hidden="true"></div></div>
+            <figcaption>Построение словесного знака</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="tish-brand-board tish-brand-board--mark"><span>02 · знак</span><i aria-hidden="true"></i><strong>тишина отражается<br>в воде</strong></div>
+            <figcaption>Знак и его образ</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <div class="tish-brand-board tish-brand-board--photo"><img src="images/tish/terrace.webp" width="1536" height="1024" alt="Терраса деревянного дома с видом на озеро" loading="lazy" decoding="async"><div><strong>ТИШЬ</strong><span>Дома у озера</span></div></div>
+            <figcaption>Фирменный знак на фотографии</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="tishDesktopTitle">
+        <h2 class="case-section__title" id="tishDesktopTitle">настольная версия</h2>
+        <p class="case-section__copy">Страница ведёт от атмосферы места к выбору дома, показывает включённые впечатления и завершает сценарий короткой формой. Повторяющийся призыв выбрать даты остаётся заметным, но не спорит с фотографиями.</p>
+        <figure class="case-figure tish-desktop-figure" data-parallax data-depth="0.025" data-rotate="0.006">
+          <div class="tish-desktop-page">
+            <div class="tish-browser__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <section class="tish-page-hero">
+              <img src="images/tish/hero-cabin.webp" width="1536" height="1024" alt="Дом у тихого озера на главном экране лендинга" loading="lazy" decoding="async">
+              <div class="tish-page-nav"><strong>ТИШЬ</strong><span>Дома&nbsp;&nbsp; Чем заняться&nbsp;&nbsp; О месте</span><b>Выбрать даты</b></div>
+              <div class="tish-page-hero__copy"><small>Карелия · берег озера</small><h3>Место, где<br>слышно тишину</h3><p>Четыре дома среди сосен.<br>Вода, тепло и время для себя.</p><span>Смотреть дома ↓</span></div>
+            </section>
+            <section class="tish-page-intro"><small>О месте</small><h3>Не уезжать от жизни,<br>а возвращаться к ней</h3><p>Просыпайтесь у воды, гуляйте без маршрута и оставайтесь у огня столько, сколько захочется.</p><b>4 дома<br><small>на первой линии</small></b></section>
+            <section class="tish-page-houses"><div class="tish-page-heading"><small>Дома</small><h3>Выберите свой вид<br>на тишину</h3></div><div class="tish-house-card"><img src="images/tish/interior.webp" width="1536" height="1024" alt="Интерьер дома Сосна" loading="lazy" decoding="async"><span>Дом «Сосна» · до 4 гостей</span></div><div class="tish-house-card"><img src="images/tish/sauna.webp" width="1536" height="1024" alt="Сауна в доме Вода" loading="lazy" decoding="async"><span>Дом «Вода» · до 2 гостей</span></div></section>
+            <section class="tish-page-experience"><img src="images/tish/boat.webp" width="1536" height="1024" alt="Лодка у деревянного причала на озере" loading="lazy" decoding="async"><div><small>Включено в проживание</small><h3>Лодка, сауна,<br>завтрак и лес</h3><ul><li>Тихая прогулка по озеру</li><li>Сауна с видом на воду</li><li>Завтрак у двери каждое утро</li></ul></div></section>
+            <section class="tish-page-review"><small>Гости о нас</small><blockquote>«Здесь впервые за долгое время не хотелось проверять время»</blockquote><span>Анна и Михаил · три ночи в доме «Сосна»</span></section>
+            <section class="tish-page-booking"><div><small>Бронирование</small><h3>Выберите даты<br>для своей паузы</h3></div><div class="tish-page-fields"><span>Заезд<br><b>18 сентября</b></span><span>Выезд<br><b>21 сентября</b></span><span>Гости<br><b>2 взрослых</b></span><strong>Найти дом →</strong></div></section>
+            <footer class="tish-page-footer"><strong>ТИШЬ</strong><span>Карелия · берег озера<br>Как добраться · Связаться с нами</span></footer>
+          </div>
+          <figcaption>Полная настольная версия лендинга</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section" aria-labelledby="tishMobileTitle">
+        <h2 class="case-section__title" id="tishMobileTitle">мобильная версия</h2>
+        <p class="case-section__copy">На небольшом экране сохраняются крупные фотографии, спокойный ритм и быстрый доступ к выбору дат. Карточки домов и форма перестраиваются в последовательный вертикальный сценарий.</p>
+        <div class="case-gallery tish-mobile-grid">
+          <figure class="case-figure" data-parallax data-depth="-0.025" data-rotate="-0.008"><div class="tish-phone"><div class="tish-phone__screen tish-phone__screen--hero"><img src="images/tish/hero-cabin.webp" width="1536" height="1024" alt="Главный экран мобильного лендинга с домом у озера" loading="lazy" decoding="async"><div class="tish-phone__top"><strong>ТИШЬ</strong><span>Меню</span></div><div class="tish-phone__hero-copy"><small>Карелия · берег озера</small><b>Место, где<br>слышно тишину</b><span>Выбрать даты →</span></div></div></div><figcaption>Главный экран</figcaption></figure>
+          <figure class="case-figure" data-parallax data-depth="0.03" data-rotate="0.009"><div class="tish-phone"><div class="tish-phone__screen tish-phone__screen--content"><div class="tish-phone__top tish-phone__top--dark"><strong>ТИШЬ</strong><span>Меню</span></div><small>Дома</small><h3>Выберите свой<br>вид на тишину</h3><img src="images/tish/interior.webp" width="1536" height="1024" alt="Интерьер дома в карточке мобильного лендинга" loading="lazy" decoding="async"><b>Дом «Сосна»</b><p>До 4 гостей · сауна · вид на озеро</p><span class="tish-ui-button">Подробнее →</span></div></div><figcaption>Выбор дома</figcaption></figure>
+          <figure class="case-figure" data-parallax data-depth="-0.032" data-rotate="-0.01"><div class="tish-phone"><div class="tish-phone__screen tish-phone__screen--content"><div class="tish-phone__top tish-phone__top--dark"><strong>ТИШЬ</strong><span>Меню</span></div><img class="tish-phone__feature" src="images/tish/sauna.webp" width="1536" height="1024" alt="Сауна с видом на озеро в мобильном лендинге" loading="lazy" decoding="async"><small>Дом «Вода»</small><h3>Тепло внутри,<br>озеро перед вами</h3><ul><li>2 гостя</li><li>своя сауна</li><li>завтрак включён</li></ul><span class="tish-ui-button">Выбрать даты →</span></div></div><figcaption>Страница дома</figcaption></figure>
+          <figure class="case-figure" data-parallax data-depth="0.027" data-rotate="0.008"><div class="tish-phone"><div class="tish-phone__screen tish-phone__screen--booking"><div class="tish-phone__top tish-phone__top--dark"><strong>ТИШЬ</strong><span>Закрыть</span></div><small>Бронирование</small><h3>Когда вы хотите<br>приехать?</h3><div class="tish-phone__field"><span>Заезд</span><b>18 сентября</b></div><div class="tish-phone__field"><span>Выезд</span><b>21 сентября</b></div><div class="tish-phone__field"><span>Гости</span><b>2 взрослых</b></div><span class="tish-ui-button">Найти дом →</span><img src="images/tish/breakfast.webp" width="1536" height="1024" alt="Завтрак у окна с видом на озеро" loading="lazy" decoding="async"></div></div><figcaption>Бронирование</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="tishStatesTitle">
+        <h2 class="case-section__title" id="tishStatesTitle">состояния страницы</h2>
+        <p class="case-section__copy">Дополнительные состояния поддерживают тот же визуальный язык: меню не перекрывает атмосферу, календарь оставляет только важные данные, а подтверждение завершает путь коротким и спокойным сообщением.</p>
+        <div class="case-gallery tish-states-grid">
+          <figure class="case-figure tish-state"><div class="tish-state__menu"><img src="images/tish/forest.webp" width="1024" height="1536" alt="Лес на фоне открытого меню лендинга" loading="lazy" decoding="async"><div class="tish-state__shade" aria-hidden="true"></div><header><strong>ТИШЬ</strong><span>Закрыть</span></header><nav><b>Дома</b><b>Чем заняться</b><b>О месте</b><b>Как добраться</b></nav><small>Карелия · берег озера</small></div><figcaption>Открытое меню</figcaption></figure>
+          <figure class="case-figure tish-state"><div class="tish-state__calendar"><header><strong>Выберите даты</strong><span>Закрыть</span></header><h3>Сентябрь</h3><div class="tish-calendar-week"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div><div class="tish-calendar-days"><i></i><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b>13</b><b>14</b><b>15</b><b>16</b><b class="is-selected">17</b><b class="is-range">18</b><b class="is-range">19</b><b class="is-range">20</b><b class="is-selected">21</b></div><div class="tish-guests"><span>Гости<br><b>2 взрослых</b></span><strong>−&nbsp;&nbsp; 2 &nbsp;&nbsp;+</strong></div><span class="tish-ui-button">Показать дома →</span></div><figcaption>Выбор дат и гостей</figcaption></figure>
+          <figure class="case-figure tish-state"><div class="tish-state__success"><img src="images/tish/boat.webp" width="1536" height="1024" alt="Лодка на тихом озере после отправки заявки" loading="lazy" decoding="async"><div class="tish-state__shade" aria-hidden="true"></div><header><strong>ТИШЬ</strong><span>Закрыть</span></header><div><i aria-hidden="true">✓</i><h3>Дом ждёт вас</h3><p>Заявка отправлена. Мы свяжемся с вами в течение часа и подтвердим бронирование.</p><b>Вернуться на главную →</b></div></div><figcaption>Заявка отправлена</figcaption></figure>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <article class="case-view case-view--pole" id="casePole" data-case-route="#case-pole" hidden>
+    <div class="case-page">
+      <a class="back-link" href="#cases" aria-label="назад к кейсам">&lt;</a>
+      <header class="case-hero pole-case-hero">
+        <h1 class="case-title">поле</h1>
+        <div class="case-tags" aria-label="теги кейса">
+          <span>айдентика</span>
+          <span>упаковка</span>
+          <span>цветы</span>
+        </div>
+      </header>
+
+      <div class="case-body">
+        <figure class="case-figure case-figure--lead pole-lead" data-parallax data-depth="0.025" data-rotate="0.012">
+          <div class="pole-lead-board">
+            <img src="images/pole/hero-bouquet.webp" width="1536" height="1024" alt="Яркий букет в синей упаковке на столе цветочного бюро" loading="eager" fetchpriority="high" decoding="async">
+            <div class="pole-lead-logo"><strong>ПОЛЕ</strong><span>цветочное бюро</span></div>
+            <span class="pole-lead-sticker">букет<br>с характером</span>
+          </div>
+          <figcaption>Айдентика городского цветочного бюро «Поле»</figcaption>
+        </figure>
+
+        <dl class="case-facts">
+          <div>
+            <dt>задача:</dt>
+            <dd>создать заметный бренд цветочного бюро без привычной романтичной эстетики</dd>
+          </div>
+          <div>
+            <dt>результат:</dt>
+            <dd>система айдентики, упаковка, оформление точки, доставка и шаблоны для рекламы</dd>
+          </div>
+          <div>
+            <dt>срок:</dt>
+            <dd>3 недели</dd>
+          </div>
+        </dl>
+      </div>
+
+      <section class="case-section" aria-labelledby="poleConceptTitle">
+        <h2 class="case-section__title" id="poleConceptTitle">концепт</h2>
+        <p class="case-section__copy">«Поле» собирает свободные сезонные букеты для города. Визуальный язык строится на столкновении живых, несовершенных цветов с резкой типографикой и чистыми цветовыми плоскостями. Бренд выглядит смело, но не теряет ощущение ручной работы.</p>
+        <div class="case-gallery pole-concept-grid">
+          <figure class="case-figure pole-concept-photo" data-parallax data-depth="-0.035" data-rotate="-0.012"><img src="images/pole/flowers-macro.webp" width="1024" height="1536" alt="Макросъёмка коралловых тюльпанов и оранжевого ранункулюса" loading="lazy" decoding="async"><span>цвет<br>без фильтров</span><figcaption>Насыщенный и честный фотостиль</figcaption></figure>
+          <figure class="case-figure pole-concept-photo pole-concept-photo--wide" data-parallax data-depth="0.03" data-rotate="0.01"><img src="images/pole/florist.webp" width="1536" height="1024" alt="Флорист собирает свободный сезонный букет в мастерской" loading="lazy" decoding="async"><span>собрано<br>руками</span><figcaption>Процесс становится частью коммуникации</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section case-section--palette" aria-labelledby="polePaletteTitle">
+        <h2 class="case-section__title" id="polePaletteTitle">палитра</h2>
+        <div class="case-palette pole-palette" aria-label="цветовая палитра бренда Поле">
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #f3ebdd"></span><strong>#F3EBDD · сливочный</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #173cce"></span><strong>#173CCE · кобальтовый</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #ffc93c"></span><strong>#FFC93C · солнечный</strong></div>
+          <div class="palette-card"><span class="palette-card__swatch" style="--swatch: #e64b38"></span><strong>#E64B38 · коралловый</strong></div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleLogoTitle">
+        <h2 class="case-section__title" id="poleLogoTitle">знак и типографика</h2>
+        <p class="case-section__copy">Название набрано плотным гротеском и может растягиваться по формату, будто цветы заполняют свободное место. Круглая буква «О» превращается в простую метку: стикер, ценник или центр динамичной композиции.</p>
+        <div class="case-gallery pole-logo-grid">
+          <figure class="case-figure"><div class="pole-logo-card pole-logo-card--main"><small>основная версия</small><strong>ПОЛЕ</strong><span>цветочное бюро</span></div><figcaption>Основной словесный знак</figcaption></figure>
+          <figure class="case-figure"><div class="pole-logo-card pole-logo-card--mark"><small>динамический знак</small><i>О</i><strong>растёт<br>по формату</strong></div><figcaption>Круглая метка и принцип роста</figcaption></figure>
+          <figure class="case-figure"><div class="pole-logo-card pole-logo-card--type"><small>голос бренда</small><strong>НЕ ИДЕАЛЬНЫЙ.<br>ЗАТО ЖИВОЙ.</strong><span>букеты из сезонных цветов</span></div><figcaption>Характер сообщений</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleSystemTitle">
+        <h2 class="case-section__title" id="poleSystemTitle">графическая система</h2>
+        <p class="case-section__copy">Круг, растянутые буквы и короткие фразы образуют гибкий набор элементов. Их можно собирать в плотный паттерн, использовать как отдельные стикеры или превращать в практичные ценники и памятки по уходу.</p>
+        <div class="case-gallery pole-elements-grid">
+          <figure class="case-figure"><div class="pole-system-card pole-system-card--pattern" aria-label="фирменный паттерн"><span>П</span><i>О</i><b>Л</b><em>Е</em><strong>ПОЛЕ</strong></div><figcaption>Модульный паттерн</figcaption></figure>
+          <figure class="case-figure"><div class="pole-system-card pole-system-card--stickers" aria-label="набор фирменных стикеров"><span>без<br>повода</span><span>собрано<br>сегодня</span><span>руками</span><span>для<br>вас</span><strong>ПОЛЕ</strong></div><figcaption>Стикеры для упаковки</figcaption></figure>
+          <figure class="case-figure"><div class="pole-system-card pole-system-card--tags"><div><small>букет № 12</small><strong>ИСКРА</strong><span>тюльпан · ранункулюс · зелень</span><b>3 900 ₽</b></div><div><small>как ухаживать</small><strong>СВЕЖАЯ<br>ВОДА</strong><span>подрезайте стебли раз в два дня</span><i>→</i></div></div><figcaption>Ценник и памятка по уходу</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="polePackagingTitle">
+        <h2 class="case-section__title" id="polePackagingTitle">упаковка</h2>
+        <p class="case-section__copy">Все носители работают как конструктор: кобальтовая бумага, солнечная карточка и коралловая круглая метка комбинируются в разных пропорциях. Яркая система узнаётся даже без сложных иллюстраций.</p>
+        <div class="case-gallery pole-packaging-grid">
+          <figure class="case-figure pole-application pole-application--stationery" data-parallax data-depth="0.025" data-rotate="0.008"><img src="images/pole/stationery.webp" width="1536" height="1024" alt="Набор синей и жёлтой полиграфии с цветами на металлическом столе" loading="lazy" decoding="async"><div class="pole-card-copy"><strong>ПОЛЕ</strong><span>Это вам.<br>Просто так.</span></div><figcaption>Бумага, открытки и стикеры</figcaption></figure>
+          <figure class="case-figure pole-application pole-application--tote" data-parallax data-depth="-0.03" data-rotate="-0.009"><img src="images/pole/tote.webp" width="1124" height="1400" alt="Холщовая сумка с тюльпанами на синей скамье" loading="lazy" decoding="async"><strong class="pole-tote-logo">ПОЛЕ</strong><figcaption>Фирменный шопер для букета</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleCollectionTitle">
+        <h2 class="case-section__title" id="poleCollectionTitle">букетная линейка</h2>
+        <p class="case-section__copy">Карточки сохраняют характер айдентики, но дают покупателю понятную информацию: размер, состав и настроение букета. Названия короткие и образные, а фотографии занимают почти весь формат.</p>
+        <div class="case-gallery pole-products-grid">
+          <figure class="case-figure pole-product"><div class="pole-product__visual"><img src="images/pole/hero-bouquet.webp" width="1536" height="1024" alt="Букет Искра в синей упаковке" loading="lazy" decoding="async"><span>новинка</span></div><div class="pole-product__info"><div><strong>ИСКРА</strong><small>тюльпаны, ранункулюсы, зелень</small></div><b>3 900 ₽</b></div><figcaption>Средний сезонный букет</figcaption></figure>
+          <figure class="case-figure pole-product"><div class="pole-product__visual"><img src="images/pole/flowers-macro.webp" width="1024" height="1536" alt="Коралловые цветы букета Жар" loading="lazy" decoding="async"><span>яркий</span></div><div class="pole-product__info"><div><strong>ЖАР</strong><small>тюльпаны, пионы, акцентные цветы</small></div><b>5 200 ₽</b></div><figcaption>Большой акцентный букет</figcaption></figure>
+          <figure class="case-figure pole-product"><div class="pole-product__visual"><img src="images/pole/florist.webp" width="1536" height="1024" alt="Свободный букет Сад в руках флориста" loading="lazy" decoding="async"><span>свободный</span></div><div class="pole-product__info"><div><strong>САД</strong><small>пионы, ветви, полевая зелень</small></div><b>4 600 ₽</b></div><figcaption>Воздушный авторский букет</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleSpaceTitle">
+        <h2 class="case-section__title" id="poleSpaceTitle">пространство и доставка</h2>
+        <p class="case-section__copy">Вывеска превращает небольшую точку в яркий городской ориентир, а велосипед продолжает айдентику в движении. Название остаётся крупным и читаемым издалека.</p>
+        <div class="case-gallery pole-space-grid">
+          <figure class="case-figure pole-application pole-application--store"><img src="images/pole/storefront.webp" width="1536" height="1024" alt="Фасад городского цветочного магазина с синей вывеской" loading="lazy" decoding="async"><strong class="pole-store-logo">ПОЛЕ</strong><span class="pole-store-round">П</span><figcaption>Оформление цветочного бюро</figcaption></figure>
+          <figure class="case-figure pole-application pole-application--bike" data-parallax data-depth="0.022" data-rotate="0.007"><img src="images/pole/bicycle.webp" width="1536" height="1024" alt="Синий велосипед с жёлтой коробкой и букетом для доставки" loading="lazy" decoding="async"><div class="pole-bike-copy"><strong>ПОЛЕ</strong><span>цветы<br>по городу</span></div><figcaption>Фирменная доставка</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleCampaignTitle">
+        <h2 class="case-section__title" id="poleCampaignTitle">рекламная серия</h2>
+        <p class="case-section__copy">Серия строится на коротких живых фразах и резком кадрировании. Макеты легко обновлять под новые сезонные цветы, сохраняя узнаваемый ритм и цвет.</p>
+        <div class="case-gallery pole-campaign-grid">
+          <figure class="case-figure pole-poster pole-poster--blue"><div class="pole-poster__visual"><img src="images/pole/flowers-macro.webp" width="1024" height="1536" alt="Яркие цветы в рекламном макете бренда Поле" loading="lazy" decoding="async"><header><strong>ПОЛЕ</strong><span>01</span></header><div><h3>ЦВЕТЫ<br>НЕ ПО ПЛАНУ</h3><p>Сезонные букеты каждый день</p></div></div><figcaption>Имиджевый плакат</figcaption></figure>
+          <figure class="case-figure pole-poster pole-poster--yellow"><div class="pole-poster__visual"><img src="images/pole/florist.webp" width="1536" height="1024" alt="Флорист за работой в рекламном макете" loading="lazy" decoding="async"><header><strong>ПОЛЕ</strong><span>02</span></header><div><h3>СОБРАНО<br>СЕГОДНЯ</h3><p>Ни одного одинакового букета</p></div></div><figcaption>Рассказ о процессе</figcaption></figure>
+          <figure class="case-figure pole-poster pole-poster--red"><div class="pole-poster__visual"><img src="images/pole/hero-bouquet.webp" width="1536" height="1024" alt="Букет в синей упаковке в рекламном макете" loading="lazy" decoding="async"><header><strong>ПОЛЕ</strong><span>03</span></header><div><h3>ПРОСТО<br>ПОДАРИТЕ</h3><p>Доставим по городу сегодня</p></div></div><figcaption>Макет для доставки</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="poleDigitalTitle">
+        <h2 class="case-section__title" id="poleDigitalTitle">цифровые носители</h2>
+        <p class="case-section__copy">В мобильных форматах система становится ещё плотнее: крупные названия, одна фотография и одно действие. Шаблоны подходят для историй, карточки букета и сообщения после оформления заказа.</p>
+        <div class="case-gallery pole-digital-grid">
+          <figure class="case-figure" data-parallax data-depth="-0.022" data-rotate="-0.008"><div class="pole-digital-phone pole-digital-phone--story"><img src="images/pole/flowers-macro.webp" width="1024" height="1536" alt="Цветы в истории бренда Поле" loading="lazy" decoding="async"><header><strong>ПОЛЕ</strong><span>сегодня</span></header><div><small>букет дня</small><h3>ЖАР</h3><p>Пять свободных букетов<br>в наличии до вечера</p><b>Забрать →</b></div></div><figcaption>История с букетом дня</figcaption></figure>
+          <figure class="case-figure" data-parallax data-depth="0.028" data-rotate="0.009"><div class="pole-digital-phone pole-digital-phone--order"><header><strong>ПОЛЕ</strong><span>Меню</span></header><img src="images/pole/hero-bouquet.webp" width="1536" height="1024" alt="Букет Искра в мобильной карточке товара" loading="lazy" decoding="async"><div><small>сезонный букет</small><h3>ИСКРА</h3><p>Тюльпаны, ранункулюсы и свободная зелень. Каждый букет немного отличается.</p><span><b>3 900 ₽</b><strong>Заказать →</strong></span></div></div><figcaption>Карточка букета</figcaption></figure>
+          <figure class="case-figure" data-parallax data-depth="-0.026" data-rotate="-0.009"><div class="pole-digital-phone pole-digital-phone--success"><header><strong>ПОЛЕ</strong><span>Закрыть</span></header><i>✓</i><h3>БУКЕТ<br>В ПУТИ</h3><p>Мы соберём его сегодня и напишем перед доставкой.</p><div><span>Заказ № 124</span><b>Вернуться к цветам →</b></div></div><figcaption>Подтверждение заказа</figcaption></figure>
+        </div>
       </section>
     </div>
   </article>
@@ -211,7 +519,7 @@
 
   <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
     <div class="menu-media" aria-hidden="true">
-      <img src="img/front.png" alt="">
+      <img src="img/front.webp" width="981" height="981" alt="" loading="lazy" decoding="async">
     </div>
     <div class="menu-panel">
       <div>
@@ -221,7 +529,6 @@
           <a href="#skills">что умею</a>
           <a href="#cases">кейсы</a>
           <a href="#contacts">контакты</a>
-          <a href="turntable.html">игра</a>
         </nav>
       </div>
       <p class="menu-contact">по всем вопросам<br>тг:<a href="https://t.me/verykarachay" target="_blank" rel="noopener">@verykarachay</a></p>
